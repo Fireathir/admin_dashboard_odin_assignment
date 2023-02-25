@@ -1,0 +1,27 @@
+.container{
+    border: 2px solid red;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr)
+}
+
+
+.sidebar{
+    border: 2px solid red;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.header{
+    border: 2px solid red;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+
+.projectWindow{
+    border: 2px solid red;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+}
