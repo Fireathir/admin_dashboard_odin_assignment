@@ -1,27 +1,107 @@
+body{
+    border: 2px solid red;
+    padding: 0px;
+    margin: 0;
+    height: 100vh;
+}
+/* main cointainer */
 .container{
-    border: 2px solid red;
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 1fr)
+    height: 100%;
+    width: 100%;
+    border: 2px solid brown;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-
+/*sidebar menu*/
 .sidebar{
-    border: 2px solid red;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    border: 2px solid green;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left:20px;
 }
 
+/*everything to the right of sidebar*/
+.mainContent{
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+
+/*container with search, small and big admin name and buttons */
 .header{
-    border: 2px solid red;
-    grid-column-start: 2;
+    border: 2px solid pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+/*Searchbar and name container*/
+.searchBar{
+    grid-column-start: 1;
     grid-column-end: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 50px;
+}
+
+/*container for searchbar itself*/
+.inputContainer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.searchInput{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 15px;
+    align-items: center;
 }
 
 
-.projectWindow{
-    border: 2px solid red;
-    grid-column-start: 2;
+/*name to the right*/
+.adminName{
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+/*container for big admin name and buttons*/
+.lowerHeader{
+    grid-column-start: 1;
     grid-column-end: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.adminNameHeader{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.headerButtons{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.headerButton{
     grid-row-start: 2;
+    grid-row-end: 3;
+    border-radius: 3px;
+}
+
+/*big container bellow header*/
+.projectWindow{
+    border:2px solid teal;
+
+    height: 85vh;
+
 }
