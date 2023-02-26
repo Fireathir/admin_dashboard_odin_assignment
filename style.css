@@ -1,14 +1,18 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
-    border: 2px solid red;
+
     padding: 0px;
     margin: 0;
     height: 100vh;
+    background-color: rgb(217, 224, 232);
 }
 /* main cointainer */
 .container{
     height: 100%;
     width: 100%;
-    border: 2px solid brown;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -16,10 +20,11 @@ body{
 
 /*sidebar menu*/
 .sidebar{
-    border: 2px solid green;
+    background-color: #357EC7;
     grid-row-start: 1;
     grid-row-end: 2;
     padding-left:20px;
+    color:white;
     padding-right: 10px;
 }
 
@@ -31,12 +36,13 @@ body{
 
 /*container with search, small and big admin name and buttons */
 .header{
-    border: 2px solid pink;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 50px 1fr;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: white;
+    box-shadow: 0px 10px 10px -10px rgb(190, 188, 188);
 
 }
 
@@ -48,6 +54,7 @@ body{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     height: 50px;
+
 }
 
 /*container for searchbar itself*/
@@ -60,8 +67,10 @@ body{
 .searchInput{
     grid-row-start: 2;
     grid-row-end: 3;
-    height: 15px;
+    height: 20px;
     align-items: center;
+    border-radius: 15px;
+    background-color: rgb(241, 239, 239);
 }
 
 
@@ -91,43 +100,115 @@ body{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5px;
+
 }
 
 .headerButton{
     grid-row-start: 2;
     grid-row-end: 3;
-    border-radius: 3px;
+    border-radius: 5px;
+    background-color: #357EC7;
+    color:white;
+
 }
 
 /*big container bellow header*/
 .projectWindow{
-    border:2px solid teal;
+
     height: 85vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
 
 }
 
 /*big project container*/
 .projects{
-    border: 2px solid red;
     grid-column-start: 1;
     grid-column-end:  4;
+    display: grid;
+    grid-template-rows: 40px 1fr;
+
 }
+.projectsHeader{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.smallHeaders{
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+.projectGrid{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.projectGrids{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px darkgray;
+    padding: 10px;
+
+}
+
+
 
 /*container for announcements and trending*/
 .rightProjectContainer{
-    border: 2px solid blue;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
 /*announcements container*/
 .announcements{
-    border: 2px solid rgb(10, 183, 162);
+    display: grid;
+    grid-template-rows: 40px 1fr;
 }
+.announcementsHeader{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
 
 /*tranding container*/
 .trending{
-    border: 2px solid orange;
+    display: grid;
+    grid-template-rows: 40px 1fr;
+}
+.trendingHeader{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.announcementsContainer, .trendingContainer{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px darkgray;
+}
+
+.trendingContainer{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+@media all and (max-width: 1000px){
+    .projectGrid{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
 }
