@@ -20,6 +20,7 @@ body{
     grid-row-start: 1;
     grid-row-end: 2;
     padding-left:20px;
+    padding-right: 10px;
 }
 
 /*everything to the right of sidebar*/
@@ -101,7 +102,32 @@ body{
 /*big container bellow header*/
 .projectWindow{
     border:2px solid teal;
-
     height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
+}
+
+/*big project container*/
+.projects{
+    border: 2px solid red;
+    grid-column-start: 1;
+    grid-column-end:  4;
+}
+
+/*container for announcements and trending*/
+.rightProjectContainer{
+    border: 2px solid blue;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+/*announcements container*/
+.announcements{
+    border: 2px solid rgb(10, 183, 162);
+}
+
+/*tranding container*/
+.trending{
+    border: 2px solid orange;
 }
